@@ -6,7 +6,7 @@ ENV LANG C.UTF-8
 # Configure bundler
 RUN \
   bundle config --global frozen 1 && \
-  bundle config --global build.nokogiri --use-system-libraries 
+  bundle config --global build.nokogiri --use-system-libraries
 
 # Install cmake
 ENV CMAKE_MAJOR=3.4
@@ -57,10 +57,6 @@ ONBUILD RUN if [ -f package.json ]; then \
     rm -f .npmrc; \
     fi;
 
-# Install libgit2 for pronto gem
-RUN apt-get install -y wget
-RUN git clone https://github.com/libgit2/libgit2.git
-RUN cd libgit2 && mkdir build && cd build && cmake .. && cmake --build .
 
 # Install gems
 ONBUILD COPY vendor /usr/src/app/vendor
