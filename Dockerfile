@@ -34,7 +34,7 @@ RUN \
   echo "${NODE_SHASUM256}  node-v$NODE_VERSION-linux-x64.tar.gz" | sha256sum -c - &&\
   tar --strip-components 1 -xzf node-v$NODE_VERSION-linux-x64.tar.gz node-v$NODE_VERSION-linux-x64/bin node-v$NODE_VERSION-linux-x64/include node-v$NODE_VERSION-linux-x64/lib && \
   rm node-v$NODE_VERSION-linux-x64.tar.gz && \
-  curl -sL https://deb.nodesource.com/setup_10.x &&\
+  curl -sL https://deb.nodesource.com/setup_13.x &&\
   apt-get install -y nodejs
 
 # Install yarn
