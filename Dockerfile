@@ -27,7 +27,7 @@ RUN apt-get update && \
 # Install node.js
 ENV NODE_VERSION=13.9.0
 
-ENV NODE_SHASUM256=8d13d57aaf95177e97d29c0944d79a17de8c3a31ba3fe88d1846cfd907e52111
+ENV NODE_SHASUM256=5cd26d58edabb7b636c3f1c6e62ea074849bd0f077f870066aaac485572cacef
 RUN \
   cd /usr/local && \
   curl -sfLO https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz && \
