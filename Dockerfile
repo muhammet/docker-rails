@@ -25,7 +25,7 @@ RUN apt-get update && \
     apt-get install -y git libssh2-1 libssh2-1-dev
 
 # Install node.js
-ENV NODE_VERSION=10.12.0
+ENV NODE_VERSION=13.9.0
 
 ENV NODE_SHASUM256=8d13d57aaf95177e97d29c0944d79a17de8c3a31ba3fe88d1846cfd907e52111
 RUN \
